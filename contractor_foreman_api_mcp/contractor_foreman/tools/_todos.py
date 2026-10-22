@@ -31,7 +31,7 @@ EXAMPLE_TODO: dict[str, Any] = {
     "due_time": "09:00 AM",
     "completed_date": None,
     "assignees": ["Scott Carli"],
-    "created_by": "Michael Howard",
+    "created_by": "Sam Ortega",
     "created_date": "2026-10-21",
     "checklist": [{"task": "Get final SKU list signed", "done": False}],
 }

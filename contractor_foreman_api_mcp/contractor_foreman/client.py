@@ -1,4 +1,4 @@
-"""Contractor Foreman panel requests, recorded 21.10.2026 on a production team account.
+"""Contractor Foreman panel requests, recorded 21.10.2026.
 
 The panel (app.contractorforeman.net, React Router) sends its API calls from a web worker as plain
 `fetch` to same-host `/api/...` paths: JSON bodies with `content-type: text/plain;charset=UTF-8`, no auth

@@ -56,7 +56,7 @@ EXAMPLE_LOG: dict[str, Any] = {
     "date": "2026-10-20",
     "arrival_time": "07:00 AM",
     "departure_time": "03:30 PM",
-    "created_by": "Michael Howard",
+    "created_by": "Sam Ortega",
     "notes": "Hung and taped drywall in the dining area. Patched ceiling at the old soffit.",
     "people": "Drywall crew: 3, Electrician: 1",
     "employees_on_site": [],

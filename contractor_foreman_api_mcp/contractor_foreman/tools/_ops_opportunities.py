@@ -20,7 +20,7 @@ EXAMPLE_OPPORTUNITY: dict[str, Any] = {
     "est_sales_date": "2026-12-15",
     "project_type": "Commercial",
     "referral_source": None,
-    "assigned_to": "Michael Howard",
+    "assigned_to": "Sam Ortega",
     "description": None,
     "address": {"address1": None, "city": None, "state": None, "zip": None},
     "added_on": "2026-10-21",

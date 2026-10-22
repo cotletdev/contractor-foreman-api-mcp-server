@@ -42,7 +42,7 @@ INPUT_SCHEMA: dict[str, Any] = {
         "entries": [
             {
                 "employee_id": 6819056,
-                "employee": "Michael Howard",
+                "employee": "Sam Ortega",
                 "cost_code": "Project Management/Coordination",
                 "hours": 20.0,
                 "notes": None,

@@ -49,7 +49,7 @@ def timecard_out(row: dict[str, Any], fmt: str) -> dict[str, Any]:
 EXAMPLE_TIMECARD: dict[str, Any] = {
     "timecard_id": 13199473,
     "type": "employee",
-    "employee": "Michael Howard",
+    "employee": "Sam Ortega",
     "crew": None,
     "project_id": 1678164,
     "project": "Speedway - Tenant Fit Out",

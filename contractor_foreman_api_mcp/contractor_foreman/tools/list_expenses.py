@@ -28,7 +28,7 @@ EXAMPLE_ROW: dict[str, Any] = {
     "project_id": 1678164,
     "project": "Speedway - Tenant Fit Out",
     "type": "Material",
-    "paid_by": "Michael Howard",
+    "paid_by": "Sam Ortega",
     "paid_through": None,
     "billable": False,
     "reason": None,

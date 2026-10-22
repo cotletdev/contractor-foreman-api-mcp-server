@@ -10,7 +10,7 @@ EXAMPLE_NOTE: dict[str, Any] = {
     "note_id": 4352070,
     "title": "Grease trap location",
     "text": "Owner approved moving the grease trap 18 inches east of the prep sink. Plumber notified on site.",
-    "added_by": "Michael Howard",
+    "added_by": "Sam Ortega",
     "added_on": "10/21/2026 08:03 AM",
     "files": 0,
 }

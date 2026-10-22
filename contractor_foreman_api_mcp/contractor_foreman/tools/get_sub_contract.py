@@ -34,7 +34,7 @@ EXAMPLE_SC: dict[str, Any] = {
     "balance": None,
     "retainage_percent": 10.0,
     "status": "Approved",
-    "issued_by": "Michael Howard",
+    "issued_by": "Sam Ortega",
     "scope_of_work": "Painting of interior walls, hallway and bathrooms as per plans dated 02-20-2020",
     "items": [
         {

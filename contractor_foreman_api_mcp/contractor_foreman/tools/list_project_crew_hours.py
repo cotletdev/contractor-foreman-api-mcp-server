@@ -34,13 +34,13 @@ EXAMPLE_RESPONSE: dict[str, Any] = {
     "total_hours": 52.0,
     "total_cost": 616.48,
     "employees": [
-        {"employee": "Michael Howard", "hours": 36.0, "overtime_hours": 0.0, "cost": 0.0, "days": 3},
+        {"employee": "Sam Ortega", "hours": 36.0, "overtime_hours": 0.0, "cost": 0.0, "days": 3},
         {"employee": "Martin Scovill", "hours": 16.0, "overtime_hours": 0.0, "cost": 616.48, "days": 2},
     ],
     "entries": [
         {
             "date": "2024-01-31",
-            "employee": "Michael Howard",
+            "employee": "Sam Ortega",
             "cost_code": None,
             "hours": 20.0,
             "overtime_hours": 0.0,

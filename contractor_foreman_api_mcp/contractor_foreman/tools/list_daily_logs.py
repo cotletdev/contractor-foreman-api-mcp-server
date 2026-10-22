@@ -39,7 +39,7 @@ EXAMPLE_RESPONSE: dict[str, Any] = {
             "date": "2026-10-20",
             "arrival_time": "07:00 AM",
             "project_name": "Speedway - Tenant Fit Out",
-            "created_by": "Michael Howard",
+            "created_by": "Sam Ortega",
             "status": None,
         }
     ],

@@ -33,7 +33,7 @@ EXAMPLE_PO: dict[str, Any] = {
     "delivery_date": None,
     "total": 268.5,
     "status": "Draft",
-    "ordered_by": "Michael Howard",
+    "ordered_by": "Sam Ortega",
     "ship_via": None,
     "terms": None,
     "notes": None,

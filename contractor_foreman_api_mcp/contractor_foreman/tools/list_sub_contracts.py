@@ -37,7 +37,7 @@ EXAMPLE_ROW: dict[str, Any] = {
     "balance": 10000.0,
     "retainage_percent": 10.0,
     "status": "Approved",
-    "issued_by": "Michael Howard",
+    "issued_by": "Sam Ortega",
 }
 
 

@@ -29,7 +29,7 @@ EXAMPLE_PUNCHLIST: dict[str, Any] = {
     "customer": "John Pence",
     "open_items": 0,
     "completed_items": 0,
-    "created_by": "Michael Howard",
+    "created_by": "Sam Ortega",
     "created_date": "2026-10-21",
 }
 

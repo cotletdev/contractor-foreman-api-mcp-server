@@ -33,7 +33,7 @@ EXAMPLE_ROW: dict[str, Any] = {
     "end_date": "2026-10-23",
     "total": 0.0,
     "assigned_to": None,
-    "issued_by": "Michael Howard",
+    "issued_by": "Sam Ortega",
 }
 
 
