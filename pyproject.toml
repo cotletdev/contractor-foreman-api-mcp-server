@@ -24,6 +24,7 @@ Source = "https://github.com/cotletdev/contractor-foreman-api-mcp-server"
 
 [project.scripts]
 contractor-foreman-mcp = "contractor_foreman_api_mcp.cli:main"
+contractor-foreman-api-mcp = "contractor_foreman_api_mcp.cli:main"
 
 [build-system]
 requires = ["hatchling>=1.27"]

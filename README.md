@@ -1,5 +1,7 @@
 # Contractor Foreman API and MCP server, self-hosted
 
+<!-- mcp-name: dev.cotlet/contractor-foreman -->
+
 A **Contractor Foreman API** and a **Contractor Foreman MCP server** you run on your own computer, in Python, on the session of your own Google Chrome. All 89 Contractor Foreman tools we run in production at [Cotlet](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server): projects, schedule, daily logs, punchlists, to-dos, estimates, change orders, invoices, payments, job costing, directory, leads, time cards, bills, purchase orders, sub-contracts, work orders, service tickets, RFIs, submittals and inspections.
 
 Contractor Foreman has no public API and no official MCP server. This repo gives you both:
