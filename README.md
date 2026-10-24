@@ -18,11 +18,10 @@ It is for technical people who want to run it themselves, **for noncommercial us
 [![MCP Badge](https://lobehub.com/badge/mcp/cotletdev-contractor-foreman-api-mcp-server)](https://lobehub.com/mcp/cotletdev-contractor-foreman-api-mcp-server)
 
 ```bash
-git clone https://github.com/cotletdev/contractor-foreman-api-mcp-server.git && cd contractor-foreman-api-mcp-server
-python3 -m venv .venv && . .venv/bin/activate && pip install -e .
+uv tool install contractor-foreman-api-mcp                  # or: pip install contractor-foreman-api-mcp
 contractor-foreman-mcp connect                     # reads your Contractor Foreman session from Chrome
 contractor-foreman-mcp call list_projects
-claude mcp add contractor-foreman -- "$PWD/.venv/bin/contractor-foreman-mcp" mcp
+claude mcp add contractor-foreman -- uvx contractor-foreman-api-mcp mcp
 ```
 
 ## Contents
@@ -65,6 +64,17 @@ Contractor Foreman answers a signed-out request with HTTP 200 and a "signed out"
 
 ## Install
 
+From [PyPI](https://pypi.org/project/contractor-foreman-api-mcp/):
+
+```bash
+uv tool install contractor-foreman-api-mcp       # or: pipx install contractor-foreman-api-mcp, or: pip install contractor-foreman-api-mcp
+contractor-foreman-mcp --version
+```
+
+MCP clients can also run it with no install: `uvx contractor-foreman-api-mcp mcp`.
+
+From source:
+
 ```bash
 git clone https://github.com/cotletdev/contractor-foreman-api-mcp-server.git
 cd contractor-foreman-api-mcp-server
@@ -78,7 +88,7 @@ With [uv](https://docs.astral.sh/uv/): `uv venv && uv pip install -e .`, then `u
 
 Setting it up with an AI agent (Claude Code, Codex, Cursor)? Open it in this folder and ask it to set up the repo: [`AGENTS.md`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/AGENTS.md) tells it every step, and it asks you only for the steps in Chrome.
 
-To update: `git pull && pip install -e .`. We copy every change of the hosted Contractor Foreman tools into this repo.
+To update: `uv tool upgrade contractor-foreman-api-mcp` (or `pip install -U contractor-foreman-api-mcp`), from source `git pull && pip install -e .`. We copy every change of the hosted Contractor Foreman tools into this repo.
 
 ## Connect your Chrome
 
@@ -145,9 +155,9 @@ The MCP server lists every tool with its input schema, a description written for
 ### Claude Code
 
 ```bash
-claude mcp add contractor-foreman -- /path/to/contractor-foreman-api-mcp-server/.venv/bin/contractor-foreman-mcp mcp
+claude mcp add contractor-foreman -- uvx contractor-foreman-api-mcp mcp
 # read only:
-claude mcp add contractor-foreman -- /path/to/contractor-foreman-api-mcp-server/.venv/bin/contractor-foreman-mcp mcp --read-only
+claude mcp add contractor-foreman -- uvx contractor-foreman-api-mcp mcp --read-only
 ```
 
 ### Claude Desktop
@@ -158,8 +168,8 @@ claude mcp add contractor-foreman -- /path/to/contractor-foreman-api-mcp-server/
 {
   "mcpServers": {
     "contractor-foreman": {
-      "command": "/path/to/contractor-foreman-api-mcp-server/.venv/bin/contractor-foreman-mcp",
-      "args": ["mcp"]
+      "command": "uvx",
+      "args": ["contractor-foreman-api-mcp", "mcp"]
     }
   }
 }
@@ -175,8 +185,8 @@ claude mcp add contractor-foreman -- /path/to/contractor-foreman-api-mcp-server/
 
 ```toml
 [mcp_servers.contractor-foreman]
-command = "/path/to/contractor-foreman-api-mcp-server/.venv/bin/contractor-foreman-mcp"
-args = ["mcp"]
+command = "uvx"
+args = ["contractor-foreman-api-mcp", "mcp"]
 ```
 
 ### Over HTTP

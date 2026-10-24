@@ -1,8 +1,11 @@
 {
   "mcpServers": {
     "contractor-foreman": {
-      "command": "/path/to/contractor-foreman-api-mcp-server/.venv/bin/contractor-foreman-mcp",
-      "args": ["mcp"]
+      "command": "uvx",
+      "args": [
+        "contractor-foreman-api-mcp",
+        "mcp"
+      ]
     }
   }
 }
