@@ -65,7 +65,7 @@ Errors come as `<code>: <message>`. `auth_expired` means Contractor Foreman sign
 | `contractor_foreman_api_mcp/app.py` | app name, domains, session cookies, account paths, REST prefix | Rarely |
 | `contractor_foreman_api_mcp/core/` | `@tool` declaration, errors, the account guard, the HTTP client with the session (`context.py`) | Yes |
 | `contractor_foreman_api_mcp/session.py` | reading cookies and the time zone from Chrome over CDP, the session file | Yes |
-| `contractor_foreman_api_mcp/runner.py`, `api.py`, `mcp_server.py`, `cli.py` | tool registry, REST API, MCP server, command line | Yes |
+| `contractor_foreman_api_mcp/runner.py`, `api.py`, `mcp_server.py`, `mcp_context.py`, `cli.py` | tool registry, REST API, MCP server, its prompts and resources, command line | Yes |
 | `examples/` | scripts for common jobs | Yes |
 
 A new tool is a new file in `contractor_foreman_api_mcp/contractor_foreman/tools/` with a `@tool(...)` declaration (name, access, input schema, `route`). The registry finds it, and the REST API, the MCP server and the CLI show it without other changes.

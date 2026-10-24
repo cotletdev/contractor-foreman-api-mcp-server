@@ -13,6 +13,7 @@ It is for technical people who want to run it themselves, **for noncommercial us
 [![Contractor Foreman MCP server](https://img.shields.io/badge/Contractor%20Foreman%20MCP-89%20tools-6d4aef)](#all-89-tools)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-141318)](#requirements)
 [![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial-141318)](LICENSE)
+[![MCP Badge](https://lobehub.com/badge/mcp/cotletdev-contractor-foreman-api-mcp-server)](https://lobehub.com/mcp/cotletdev-contractor-foreman-api-mcp-server)
 
 ```bash
 git clone https://github.com/cotletdev/contractor-foreman-api-mcp-server.git && cd contractor-foreman-api-mcp-server
