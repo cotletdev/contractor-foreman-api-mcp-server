@@ -8,13 +8,13 @@ Contractor Foreman has no public API and no official MCP server. This repo gives
 
 - **MCP server** for Claude Code, Claude Desktop, Cursor, Codex and any MCP client, over stdio or HTTP. [Setup](#mcp-server)
 - **REST API** on `http://127.0.0.1:8787/api/v1/contractor-foreman`, with OpenAPI docs at `/docs`. [Setup](#rest-api)
-- **Python**: `call("list_projects", search="Oak St")`, plus 10 ready scripts in [`examples/`](examples/).
+- **Python**: `call("list_projects", search="Oak St")`, plus 10 ready scripts in [`examples/`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/).
 
 It is for technical people who want to run it themselves, **for noncommercial use only** ([license](#license)). If you want it running 24/7 on a server, kept working when Contractor Foreman changes its app, for a team or a business, use the [hosted version at cotlet.dev](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server).
 
 [![Contractor Foreman MCP server](https://img.shields.io/badge/Contractor%20Foreman%20MCP-89%20tools-6d4aef)](#all-89-tools)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-141318)](#requirements)
-[![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial-141318)](LICENSE)
+[![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial-141318)](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/LICENSE)
 [![MCP Badge](https://lobehub.com/badge/mcp/cotletdev-contractor-foreman-api-mcp-server)](https://lobehub.com/mcp/cotletdev-contractor-foreman-api-mcp-server)
 
 ```bash
@@ -76,7 +76,7 @@ contractor-foreman-mcp --version
 
 With [uv](https://docs.astral.sh/uv/): `uv venv && uv pip install -e .`, then `uv run contractor-foreman-mcp ...`.
 
-Setting it up with an AI agent (Claude Code, Codex, Cursor)? Open it in this folder and ask it to set up the repo: [`AGENTS.md`](AGENTS.md) tells it every step, and it asks you only for the steps in Chrome.
+Setting it up with an AI agent (Claude Code, Codex, Cursor)? Open it in this folder and ask it to set up the repo: [`AGENTS.md`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/AGENTS.md) tells it every step, and it asks you only for the steps in Chrome.
 
 To update: `git pull && pip install -e .`. We copy every change of the hosted Contractor Foreman tools into this repo.
 
@@ -167,7 +167,7 @@ claude mcp add contractor-foreman -- /path/to/contractor-foreman-api-mcp-server/
 
 ### Cursor
 
-`~/.cursor/mcp.json`, the same block as Claude Desktop. A ready copy is in [`mcp.json`](mcp.json).
+`~/.cursor/mcp.json`, the same block as Claude Desktop. A ready copy is in [`mcp.json`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/mcp.json).
 
 ### Codex
 
@@ -247,20 +247,20 @@ call("create_daily_log", project_id=projects[0]["project_id"], date="2026-10-20"
 
 Or one tool from the shell: `contractor-foreman-mcp call list_invoices unpaid_only=true limit=10`, or with a JSON object.
 
-Ready scripts in [`examples/`](examples/). Each prints JSON or a short report, takes `--out file.csv` or `--out file.json` where it makes sense, and `--help`:
+Ready scripts in [`examples/`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/). Each prints JSON or a short report, takes `--out file.csv` or `--out file.json` where it makes sense, and `--help`:
 
 | Script | What it does |
 |---|---|
-| [`export_projects.py`](examples/export_projects.py) | Projects to CSV or JSON: customer, stage, dates, contract amount, costs, percent complete. `--status`, `--search`. |
-| [`add_daily_log.py`](examples/add_daily_log.py) | A daily log from a site note, crews and deliveries, after checking the day has no log yet. `--dry-run`. |
-| [`create_estimate.py`](examples/create_estimate.py) | An estimate from a scope list in CSV with markup. Prints the total, `--send` emails the PDF. |
-| [`create_change_order.py`](examples/create_change_order.py) | A change order or change order request from a client request; `--send` emails a saved one. |
-| [`reschedule_task.py`](examples/reschedule_task.py) | Moves a schedule task by N days and every task that depends on it. `--dry-run`. |
-| [`over_budget_projects.py`](examples/over_budget_projects.py) | Cost codes of open projects whose actual cost runs past the estimate, biggest overrun first. |
-| [`overdue_invoices.py`](examples/overdue_invoices.py) | Past-due invoices with a balance, oldest first, with days overdue and the total outstanding. |
-| [`record_payment.py`](examples/record_payment.py) | Records a check or transfer against an invoice found by its number, prints the new balance. |
-| [`crew_hours.py`](examples/crew_hours.py) | Hours and labor cost per project and employee from time cards, for the last N days or a date range. |
-| [`open_todos.py`](examples/open_todos.py) | Open to-dos due in the next N days or already late, by project. |
+| [`export_projects.py`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/export_projects.py) | Projects to CSV or JSON: customer, stage, dates, contract amount, costs, percent complete. `--status`, `--search`. |
+| [`add_daily_log.py`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/add_daily_log.py) | A daily log from a site note, crews and deliveries, after checking the day has no log yet. `--dry-run`. |
+| [`create_estimate.py`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/create_estimate.py) | An estimate from a scope list in CSV with markup. Prints the total, `--send` emails the PDF. |
+| [`create_change_order.py`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/create_change_order.py) | A change order or change order request from a client request; `--send` emails a saved one. |
+| [`reschedule_task.py`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/reschedule_task.py) | Moves a schedule task by N days and every task that depends on it. `--dry-run`. |
+| [`over_budget_projects.py`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/over_budget_projects.py) | Cost codes of open projects whose actual cost runs past the estimate, biggest overrun first. |
+| [`overdue_invoices.py`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/overdue_invoices.py) | Past-due invoices with a balance, oldest first, with days overdue and the total outstanding. |
+| [`record_payment.py`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/record_payment.py) | Records a check or transfer against an invoice found by its number, prints the new balance. |
+| [`crew_hours.py`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/crew_hours.py) | Hours and labor cost per project and employee from time cards, for the last N days or a date range. |
+| [`open_todos.py`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/open_todos.py) | Open to-dos due in the next N days or already late, by project. |
 
 ```bash
 python examples/overdue_invoices.py --out overdue.csv
@@ -467,7 +467,7 @@ The source is public, the license is not an open source license: noncommercial u
 
 ## License
 
-[PolyForm Noncommercial License 1.0.0](LICENSE). In short:
+[PolyForm Noncommercial License 1.0.0](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/LICENSE). In short:
 
 - **Allowed:** noncommercial use: you, for your own personal purposes with your own Contractor Foreman account, or a charity, school, public research or government body. Changing the code, and sharing it under the same license.
 - **Not allowed:** any commercial use, your own business included; client work; selling or offering it, or a service built on it.
@@ -478,7 +478,7 @@ The source is public, the license is not an open source license: noncommercial u
   <a href="https://cotlet.dev">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/logo-white.svg">
-      <img src="assets/logo.svg" alt="Cotlet" width="120">
+      <img src="https://raw.githubusercontent.com/cotletdev/contractor-foreman-api-mcp-server/main/assets/logo.svg" alt="Cotlet" width="120">
     </picture>
   </a>
 </p>
