@@ -34,7 +34,6 @@ EXAMPLE_RESPONSE: dict[str, Any] = {
     input_schema=INPUT_SCHEMA,
     route="GET /cost-codes",
     example_response=EXAMPLE_RESPONSE,
-    credits=20,
 )
 async def list_cost_codes(ctx: ToolContext, args: dict[str, Any]) -> Any:
     rows = (await call(ctx, "cost-codes", {})).get("data") or []

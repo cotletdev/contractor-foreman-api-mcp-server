@@ -41,7 +41,7 @@ INPUT_SCHEMA: dict[str, Any] = {
         **EXAMPLE_TIMECARD,
         "entries": [
             {
-                "employee_id": 6819056,
+                "employee_id": 5203377,
                 "employee": "Sam Ortega",
                 "cost_code": "Project Management/Coordination",
                 "hours": 20.0,

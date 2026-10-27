@@ -73,7 +73,7 @@ async def call(ctx: ToolContext, path: str, payload: dict[str, Any] | None = Non
     """One panel call with the panel's base fields; the app's error answers become a ToolError."""
     body = await api(ctx, path, {**_BASE, **(payload or {})})
     if str(body.get("need_logout")) == "1":
-        raise AuthExpiredError("The app signed this account out. Reconnect it in the console.")
+        raise AuthExpiredError("The app signed this account out. Sign in again in Chrome, then run connect.")
     message = str(body.get("message") or "")
     if message.startswith("Cannot POST") or body.get("success") is False or body.get("statusCode") not in (200, 201):
         text = message.replace("..", ".") if message and not message.startswith("Cannot") else ""

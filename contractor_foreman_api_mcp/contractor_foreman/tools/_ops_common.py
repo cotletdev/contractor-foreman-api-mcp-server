@@ -49,7 +49,7 @@ async def call(ctx: ToolContext, path: str, payload: dict[str, Any] | None = Non
     """POST `api/<path>` like the panel does and return the answer; the app's error answers raise ToolError."""
     body = await api(ctx, path, {**_BASE, **_zone(ctx), **(payload or {})})
     if str(body.get("need_logout")) == "1":
-        raise AuthExpiredError("The app signed this account out. Reconnect it in the console.")
+        raise AuthExpiredError("The app signed this account out. Sign in again in Chrome, then run connect.")
     message = str(body.get("message") or "")
     if message.startswith("Cannot POST"):
         raise ToolError("Contractor Foreman did not accept this request.", ErrorCode.TARGET_ERROR)

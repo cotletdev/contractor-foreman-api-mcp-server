@@ -26,5 +26,5 @@ async def api(ctx: ToolContext, path: str, payload: dict[str, Any] | None = None
     response = await ctx.call("POST", f"{APP}/api/{path}", data=json.dumps(payload or {}), headers=_HEADERS)
     body: dict[str, Any] = response.json()
     if body.get("unauthorize") or body.get("statusCode") == 401:
-        raise AuthExpiredError("The app signed this account out. Reconnect it in the console.")
+        raise AuthExpiredError("The app signed this account out. Sign in again in Chrome, then run connect.")
     return body

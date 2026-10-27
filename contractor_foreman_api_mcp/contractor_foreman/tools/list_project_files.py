@@ -25,9 +25,9 @@ EXAMPLE_RESPONSE: dict[str, Any] = {
             "title": None,
             "is_image": True,
             "size_bytes": 18708,
-            "url": "https://cdn.contractorforeman.net/27272/6819056/demo_data/large/2.jpg?token=...&expires=1795262454",
+            "url": "https://cdn.contractorforeman.net/40118/5203377/demo_data/large/2.jpg?token=...&expires=1795262454",
             "thumbnail_url": (
-                "https://cdn.contractorforeman.net/27272/6819056/demo_data/large/2.jpg"
+                "https://cdn.contractorforeman.net/40118/5203377/demo_data/large/2.jpg"
                 "?token=...&class=thumb&expires=1795262454"
             ),
             "notes": None,

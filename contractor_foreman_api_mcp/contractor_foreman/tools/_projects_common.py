@@ -24,7 +24,7 @@ async def panel(ctx: ToolContext, path: str, payload: dict[str, Any] | None = No
     """POST one panel call with the panel's base fields; returns the body, raises on an app error."""
     body = await api(ctx, path, {**_BASE, **(payload or {})})
     if str(body.get("need_logout") or "") == "1":
-        raise AuthExpiredError("The app signed this account out. Reconnect it in the console.")
+        raise AuthExpiredError("The app signed this account out. Sign in again in Chrome, then run connect.")
     message = str(body.get("message") or "")
     if message.startswith("Cannot POST"):
         raise ToolError("Contractor Foreman no longer answers this request.", ErrorCode.TARGET_ERROR)

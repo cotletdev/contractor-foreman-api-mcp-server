@@ -62,7 +62,6 @@ EXAMPLE_RESPONSE: dict[str, Any] = {
     input_schema=INPUT_SCHEMA,
     route="GET /cost-items",
     example_response=EXAMPLE_RESPONSE,
-    credits=20,
 )
 async def list_cost_items(ctx: ToolContext, args: dict[str, Any]) -> Any:
     size = limit(args, 50, 100)
