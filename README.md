@@ -1,8 +1,36 @@
-# Contractor Foreman API and MCP server, self-hosted
+# Contractor Foreman API and MCP server: connect Contractor Foreman to ChatGPT and Claude
 
 <!-- mcp-name: dev.cotlet/contractor-foreman -->
 
-A **Contractor Foreman API** and a **Contractor Foreman MCP server** you run on your own computer, in Python, on the session of your own Google Chrome. All 89 Contractor Foreman tools we run in production at [Cotlet](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server): projects, schedule, daily logs, punchlists, to-dos, estimates, change orders, invoices, payments, job costing, directory, leads, time cards, bills, purchase orders, sub-contracts, work orders, service tickets, RFIs, submittals and inspections.
+**Yes, ChatGPT, Claude and other AI agents can work in your Contractor Foreman account.** That includes Cursor, Codex, OpenClaw and any MCP client, plus automations in n8n, Make and Zapier. Ask in plain words, and the AI writes estimates, logs daily reports, updates the schedule, creates invoices and reports job costs. It shows you what it will do first and sends nothing to other people until you say so.
+
+This repo is the missing piece: 89 Contractor Foreman tools for AI assistants and scripts.
+
+## What you can ask
+
+> *Here is Mike's voice note from the Maple St remodel. Turn it into today's daily log: framing crew of 4, one electrician, drywall delivered, rain stopped work at 2:30.*
+>
+> *Turn this scope list from the Johnson bathroom walkthrough into an estimate with 20% markup on materials, show me the total, then email it to the client.*
+>
+> *Which open projects have cost codes running over the estimate? Show the biggest overruns first.*
+>
+> *List overdue invoices with the balance and days late, then record the $1,200 check from Burger Palace against invoice 11.*
+
+## Two ways to get it
+
+| | [Ready to use, at Cotlet](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server?utm_source=github&utm_medium=readme&utm_campaign=contractor-foreman&utm_content=two-ways) | Run it yourself, this repo |
+|---|---|---|
+| For | contractors, builders and project managers | developers |
+| Setup | sign in to Contractor Foreman once, about 5 minutes, nothing to install | Python and a terminal |
+| Works in | ChatGPT and Claude apps, on your phone too, Cursor, Codex, OpenClaw, any MCP client, n8n, Make, Zapier, REST API | Claude Code, Claude Desktop, Cursor, Codex on your computer |
+| Runs | 24/7, your computer can be off | while your computer is on |
+| Price | 7 days free, no card | free |
+
+**[Start free at cotlet.dev →](https://cotlet.dev/signup?app=contractor-foreman&utm_source=github&utm_medium=readme&utm_campaign=contractor-foreman&utm_content=top-button)**
+
+## Run it yourself
+
+A **Contractor Foreman API** and a **Contractor Foreman MCP server** you run on your own computer, in Python, on the session of your own Google Chrome. All 89 Contractor Foreman tools we run in production at [Cotlet](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server?utm_source=github&utm_medium=readme&utm_campaign=contractor-foreman&utm_content=intro): projects, schedule, daily logs, punchlists, to-dos, estimates, change orders, invoices, payments, job costing, directory, leads, time cards, bills, purchase orders, sub-contracts, work orders, service tickets, RFIs, submittals and inspections.
 
 Contractor Foreman has no public API and no official MCP server. This repo gives you both:
 
@@ -10,11 +38,11 @@ Contractor Foreman has no public API and no official MCP server. This repo gives
 - **REST API** on `http://127.0.0.1:8787/api/v1/contractor-foreman`, with OpenAPI docs at `/docs`. [Setup](#rest-api)
 - **Python**: `call("list_projects", search="Oak St")`, plus 10 ready scripts in [`examples/`](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/examples/).
 
-It is for technical people who want to run it themselves, **for noncommercial use only** ([license](#license)). If you want it running 24/7 on a server, kept working when Contractor Foreman changes its app, for a team or a business, use the [hosted version at cotlet.dev](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server).
+Free for your own use, your own business included ([license](#license)).
 
 [![Contractor Foreman MCP server](https://img.shields.io/badge/Contractor%20Foreman%20MCP-89%20tools-6d4aef)](#all-89-tools)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-141318)](#requirements)
-[![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial-141318)](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/LICENSE)
+[![License: Elastic 2.0](https://img.shields.io/badge/license-Elastic%202.0-141318)](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/LICENSE)
 [![MCP Badge](https://lobehub.com/badge/mcp/cotletdev-contractor-foreman-api-mcp-server)](https://lobehub.com/mcp/cotletdev-contractor-foreman-api-mcp-server)
 
 ```bash
@@ -26,6 +54,7 @@ claude mcp add contractor-foreman -- uvx contractor-foreman-api-mcp mcp
 
 ## Contents
 
+- [Questions from Contractor Foreman users](#questions-from-contractor-foreman-users)
 - [How it works](#how-it-works)
 - [Requirements](#requirements)
 - [Install](#install)
@@ -40,6 +69,44 @@ claude mcp add contractor-foreman -- uvx contractor-foreman-api-mcp mcp
 - [Self-hosted or hosted](#self-hosted-or-hosted)
 - [FAQ](#faq)
 - [License](#license)
+
+## Questions from Contractor Foreman users
+
+**Does Contractor Foreman have an API?**
+No public one: no REST API, developer docs or API keys (checked 11 Oct 2026). The only programmatic access is a Zapier app with 7 triggers for leads, customers and file uploads, and 2 actions, Create Lead and Create Customer. It cannot read or write estimates, change orders, daily logs, the schedule, invoices or job costing. This repo and [Cotlet](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server?utm_source=github&utm_medium=readme&utm_campaign=contractor-foreman&utm_content=faq-api) give you 89 Contractor Foreman tools as a REST API and an MCP server.
+
+**Can I get a Contractor Foreman API key?**
+Not from Contractor Foreman for your own account. With Cotlet you get your own API key that works with your Contractor Foreman account, for scripts, n8n, Make, Zapier or any HTTP client. This repo needs no key: it runs on your computer, on your own Contractor Foreman session.
+
+**Is there an official ChatGPT integration for Contractor Foreman?**
+No. Contractor Foreman has no official ChatGPT or Claude connector. Cotlet is an unofficial one that works today, in the ChatGPT and Claude apps and in any AI agent that takes an MCP server.
+
+**How do I connect Contractor Foreman to ChatGPT?**
+Sign up at [cotlet.dev](https://cotlet.dev/signup?app=contractor-foreman&utm_source=github&utm_medium=readme&utm_campaign=contractor-foreman&utm_content=faq-chatgpt), sign in to Contractor Foreman once in your Cloud Browser there, and add Cotlet to ChatGPT, following the steps in your account. Then ask ChatGPT about your Contractor Foreman like you would ask an assistant. ChatGPT needs a server on the internet, so this repo alone, running on your computer, does not connect to ChatGPT.
+
+**Can ChatGPT create estimates and daily logs in Contractor Foreman?**
+Yes, with Cotlet. It writes estimates and change orders, logs daily reports from your notes, updates the schedule and creates invoices. You approve every change.
+
+**Can I get Contractor Foreman data into a spreadsheet?**
+Yes, with Cotlet: projects, estimates, invoices and daily logs, as answers in chat or JSON for your sheet.
+
+**Can I automate Contractor Foreman with Zapier, Make or n8n?**
+Contractor Foreman's Zapier app has triggers for leads, customers and files and two actions, Create Lead and Create Customer. With Cotlet, n8n, Make and Zapier can also work with estimates, daily logs, the schedule and invoices.
+
+**Can I use it from my phone?**
+Yes, with Cotlet: once it is set up, the ChatGPT and Claude apps on your phone can use Contractor Foreman for you.
+
+**Do I need to be technical?**
+For Cotlet, no: you sign in to Contractor Foreman and add Cotlet to ChatGPT or Claude, with step-by-step instructions in your account. This repo is for people who are fine with Python and a terminal.
+
+**Is my Contractor Foreman account safe?**
+Yes. Neither Cotlet nor this repo sees or stores your Contractor Foreman password. You sign in yourself, the way you always do, and the AI works on that signed-in session. Anything that reaches other people asks for your OK first: in Cotlet by default, here through your MCP client.
+
+**Is it free?**
+This repo is free, also in your own business. Cotlet is free for 7 days with no card, then one-time credit packs from $29, no subscription. [Pricing](https://cotlet.dev/pricing?utm_source=github&utm_medium=readme&utm_campaign=contractor-foreman&utm_content=faq-price).
+
+**I manage Contractor Foreman for several accounts or clients. Does that work?**
+Yes, with Cotlet. Each Contractor Foreman login gets its own connection. Write to [contact@cotlet.dev](mailto:contact@cotlet.dev) and tell us how many accounts you manage.
 
 ## How it works
 
@@ -427,7 +494,7 @@ The REST API answers `{"error": "<code>", "message": "..."}`. The MCP server ret
 
 ## Self-hosted or hosted
 
-| | This repo | [Cotlet, hosted](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server) |
+| | This repo | [Cotlet, hosted](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server?utm_source=github&utm_medium=readme&utm_campaign=contractor-foreman&utm_content=compare) |
 |---|---|---|
 | Tools | the same 89 | the same 89 |
 | Runs | on your computer, while it is on | in the cloud, 24/7 |
@@ -435,15 +502,12 @@ The REST API answers `{"error": "<code>", "message": "..."}`. The MCP server ret
 | When Contractor Foreman changes its app | `git pull` once we have fixed it | fixed for you, every tool tested daily |
 | Approvals | your MCP client asks per call | emails to clients wait for your OK, switchable per tool |
 | Works with | MCP clients on your machine, local scripts | Claude.ai and ChatGPT connectors, n8n, Make, Zapier, any HTTP client |
-| Who may use it | you, for noncommercial use | teams, businesses, agencies |
+| Who may use it | you and your own business | you, teams, businesses, agencies |
 | Price | free | free 7-day trial with 2,000 credits, no card; then one-time packs from $29 for 5,000 credits |
 
 On the hosted version a successful call uses 10 credits, failed calls are free, and the Cloud Browser uses 50 credits a day while it has an app enabled for agents. [Full pricing](https://cotlet.dev/pricing).
 
 ## FAQ
-
-**Does Contractor Foreman have an official API?**
-No public one: no REST API, developer docs or API keys (checked 11 Oct 2026). The only programmatic access is a Zapier app with 7 triggers for leads, customers and file uploads, and 2 actions, Create Lead and Create Customer. It cannot read or write estimates, change orders, daily logs, the schedule, invoices or job costing. Details: [cotlet.dev/integrations/contractor-foreman-api-mcp-server](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server).
 
 **Is there a Contractor Foreman MCP server for Claude, ChatGPT or Cursor?**
 Yes, this one runs on your machine: `contractor-foreman-mcp mcp` for Claude Code, Claude Desktop, Cursor and Codex. ChatGPT and Claude.ai connectors need a public HTTPS URL, which the [hosted Contractor Foreman MCP server](https://cotlet.dev/integrations/contractor-foreman-api-mcp-server) gives you.
@@ -467,20 +531,20 @@ Calls fail with `auth_expired`. With Chrome remote debugging on, the server read
 Technically yes, with `CONTRACTOR_FOREMAN_AUTH_TOKEN`. Contractor Foreman then sees your session from a datacenter IP, which looks less like you. For an always-on setup the hosted version keeps your session in your own Cloud Browser on a fixed IP.
 
 **Can I use it at work or for my clients?**
-No, the license allows noncommercial use only, and running your own contracting business on it is business use. For a team, a company or client work, use [Cotlet](https://cotlet.dev) or write to [contact@cotlet.dev](mailto:contact@cotlet.dev).
+At work and in your own business, yes, free. You may not offer it to others as a hosted or managed service. For client work, use [Cotlet](https://cotlet.dev?utm_source=github&utm_medium=readme&utm_campaign=contractor-foreman&utm_content=faq-clients) or write to [contact@cotlet.dev](mailto:contact@cotlet.dev).
 
 **Is it open source?**
-The source is public, the license is not an open source license: noncommercial use only, no business use.
+The source is public under the Elastic License 2.0: free to use and change, also in your own business, but not to resell as a hosted service.
 
 **A tool broke or I need another one.**
 [Open an issue](https://github.com/cotletdev/contractor-foreman-api-mcp-server/issues) with the tool name and the error message.
 
 ## License
 
-[PolyForm Noncommercial License 1.0.0](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/LICENSE). In short:
+[Elastic License 2.0](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/LICENSE). In short:
 
-- **Allowed:** noncommercial use: you, for your own personal purposes with your own Contractor Foreman account, or a charity, school, public research or government body. Changing the code, and sharing it under the same license.
-- **Not allowed:** any commercial use, your own business included; client work; selling or offering it, or a service built on it.
+- **Allowed:** using it for yourself and in your own business, free. Changing the code and sharing it under the same license.
+- **Not allowed:** offering it to others as a hosted or managed service, removing the license notices, getting around its limits.
 
 ---
 
@@ -493,4 +557,4 @@ The source is public, the license is not an open source license: noncommercial u
   </a>
 </p>
 
-Maintained by [Cotlet](https://cotlet.dev) ([@cotletdev](https://x.com/cotletdev)). Contractor Foreman is a trademark of its owner. This project is unofficial and not affiliated with, endorsed or sponsored by Contractor Foreman.
+Maintained by [Cotlet](https://cotlet.dev?utm_source=github&utm_medium=readme&utm_campaign=contractor-foreman&utm_content=footer) ([@cotletdev](https://x.com/cotletdev)). Contractor Foreman is a trademark of its owner. This project is unofficial and not affiliated with, endorsed or sponsored by Contractor Foreman.
