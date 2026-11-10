@@ -47,7 +47,7 @@ Free for your own use, your own business included ([license](#license)).
 [![License: Elastic 2.0](https://img.shields.io/badge/license-Elastic%202.0-141318)](https://github.com/cotletdev/contractor-foreman-api-mcp-server/blob/main/LICENSE)
 [![MCP Badge](https://lobehub.com/badge/mcp/cotletdev-contractor-foreman-api-mcp-server)](https://lobehub.com/mcp/cotletdev-contractor-foreman-api-mcp-server)
 
-Also on Odel: https://odel.app/modules/cotlet/contractor-foreman
+Also on Odel: https://odel.app/modules/cotlet/contractor-foreman and mcpbeat: https://mcpbeat.com/mcp-servers/cotlet/contractor-foreman/
 
 ```bash
 uv tool install contractor-foreman-api-mcp                  # or: pip install contractor-foreman-api-mcp
