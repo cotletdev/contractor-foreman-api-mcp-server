@@ -1,6 +1,6 @@
 [project]
 name = "contractor-foreman-api-mcp"
-version = "1.0.4"
+version = "1.0.5"
 description = "Self-hosted Contractor Foreman API and MCP server on your own Chrome session. Use Contractor Foreman from Claude, Cursor, Codex or any MCP client or AI agent."
 readme = "README.md"
 license = "Elastic-2.0"
